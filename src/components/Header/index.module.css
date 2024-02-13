@@ -1,0 +1,16 @@
+.Header {
+    background-color: var(--bg-color-01);
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 20px;
+    color: var(--color-05);
+    text-align: right;
+}
+
+.logo {
+    height: 80px;
+    width: 80px;
+}

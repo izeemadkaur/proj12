@@ -1,0 +1,19 @@
+.Container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  margin-top: 40px;
+  padding: 30px;
+  position: relative;
+}
+
+.ContainerTwo {
+  background-color: var(--bg-color-04);
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 50px;
+  
+}

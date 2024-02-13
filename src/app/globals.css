@@ -1,0 +1,55 @@
+:root {
+  --bg-color-01: #252c43;
+  --bg-color-02: #0e1424;
+  --bg-color-03: #ffffff;
+  --bg-color-04: #f7f8fc;
+  --bg-color-05: #babcc8;
+
+  --color-01: #2174fe;
+  --color-02: #2174ff;
+  --color-03: #000000;
+  --color-04: #babcc8;
+  --color-05: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.Page {
+  height: calc(100vh - 100px);
+  display: flex;
+}
+
+.Content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.underlined {
+  padding-bottom: 1px;
+  border-bottom: 1px solid currentColor;
+}

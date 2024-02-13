@@ -1,0 +1,10 @@
+.Banner {
+  width: 100%;
+  border-radius: 6px;
+  padding: 10px 10px;
+  background-color: var(--bg-color-05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}

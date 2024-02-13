@@ -1,0 +1,39 @@
+.SideNav {
+    background-color: var(--bg-color-02);
+    height: 100%;
+    width: 350px;
+    display: flex;
+    flex-direction: column; /* Changed to column to stack items vertically */
+    align-items: center;
+    justify-content: flex-start; /* Changed to start to align items at the top */
+    overflow-y: auto; /* Changed to y for vertical scroll */
+    padding: 20px; /* Add padding for spacing */
+    min-width: 200px;
+  }
+  
+  .NavList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Ensure the list covers the full width of the SideNav */
+  }
+  
+  .NavItem + .NavItem {
+    margin-top: 10px; /* Add space between items */
+  }
+  
+  .NavButton {
+    width: 100%; /* Make buttons fill their container */
+    padding: 20px;
+    border: none;
+    color: var(--color-05); 
+    background-color: transparent;
+    cursor: pointer;
+    text-align: left; /* Align text to the left */
+    font-size: 1.5rem;
+  }
+  
+  .NavButton:hover {
+    color: var(--color-01); /* Change on hover */
+  }
+  
