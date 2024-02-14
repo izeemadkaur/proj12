@@ -34,7 +34,7 @@ export default function Page() {
           />
           <section id={Styles.CoverageSection}>
             <div>
-              <h2>Coverage Options</h2>
+              <h2 className={Styles.h2}>Coverage Options</h2>
               <p className={Styles.CoverageSectionDesc}>
                 Please Note: Underwriting class and coverage options may change
                 after the Risk Assessment on the following screen.

@@ -10,7 +10,6 @@ const SideNav = () => {
     { label: "Home", path: "/" },
     { label: "Coverage", path: "/application-coverage" },
     { label: "Underwriting", path: "/underwriting-questions" },
-    { label: "Navigation", path: "#" },
   ];
 
   return (

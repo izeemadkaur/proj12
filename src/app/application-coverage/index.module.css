@@ -6,6 +6,11 @@
     margin-top: 10px;
 }
 
+/* .h2 {
+  font-size: 1.7vw;
+} */
+
+
 .SelectableCardsContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));

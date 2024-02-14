@@ -15,6 +15,7 @@ const SelectableCard = forwardRef(({
   header,
   description,
   selectedValue,
+  isCustom
 }: SelectableCardProps, ref) => {
 
   const { register, watch } = useFormContext(); 
@@ -34,7 +35,7 @@ const SelectableCard = forwardRef(({
           type="radio"
           value={id}
           {...register("selectedCard")}
-          style={{ display: "none" }} // Hide the default radio button
+          style={{ display: "none" }}
         />
         {isSelected ? "✓" : "Select"}
       </label>
