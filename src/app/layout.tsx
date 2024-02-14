@@ -3,6 +3,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Theme from "@/app/Theme";
+import { AgentInfoProvider } from "@/contexts/AgentInfoContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Theme children={children} />
+        <AgentInfoProvider>
+          <Theme children={children} />
+        </AgentInfoProvider>
       </body>
     </html>
   );

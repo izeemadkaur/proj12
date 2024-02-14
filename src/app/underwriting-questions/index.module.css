@@ -1,0 +1,33 @@
+#UnderwritingSection {
+  margin-top: 80px;
+}
+
+.CoverageSectionDesc {
+    margin-top: 10px;
+}
+
+.SelectableCardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  margin-top: 40px;
+}
+
+.WhyUsSection {
+  margin-top: 40px;
+  max-width: 650px;
+}
+
+.WhyUsSection li {
+  max-width: 650px;
+}
+
+.ButtonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 40px;
+}
+
+.ButtonContainer button {
+    max-width: 400px;
+}

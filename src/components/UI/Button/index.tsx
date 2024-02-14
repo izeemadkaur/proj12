@@ -21,12 +21,14 @@ export function Button({
   onClick,
   arguments: onClickArguments,
   text,
+  disabled
 }: ButtonProps): JSX.Element {
   return (
     <StyledButton
       $type={buttonType}
       type={isSubmit ? "submit" : "button"}
       className={`${buttonType}_button`}
+      disabled={disabled}
       onClick={() =>
         onClick !== undefined &&
         onClick(onClickArguments !== undefined && onClickArguments)
@@ -46,5 +48,6 @@ export type ButtonProps = {
   buttonType: "primary" | "secondary";
   isSubmit?: boolean | true;
   navigateTo: string | undefined;
+  disabled?: boolean | undefined
 };
 

@@ -4,7 +4,7 @@ interface BannerProps {
   comp: any;
 }
 
-const Banner = ({comp}: BannerProps) => {
+const Banner = ({ comp }: BannerProps) => {
   return <div className={Styles.Banner}>{comp}</div>;
 };
 

@@ -1,0 +1,11 @@
+{
+    "agentCode:": "XXXXXXXX",
+    "name": "John Smith",
+    "gender": "Male",
+    "age": 46,
+    "birthdate": "1/2/1980",
+    "height": "5'11\"",
+    "weight": "175lbs",
+    "address": "123 Main Street, City, State 99999",
+    "tobaccoStatus": "Non-Smoker"
+}

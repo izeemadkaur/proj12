@@ -1,0 +1,60 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px 0;
+  border-radius: 8px;
+  gap: 25px;
+}
+
+.card div {
+  width: fit-content;
+}
+
+.card button {
+  width: 150px;
+  background-color: var(--white);
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding: 10px 0;
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.05);
+  font-weight: 700;
+}
+
+.optionsSection {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+.card .selected {
+  background-color: var(--color-02);
+  color: white;
+}
+
+
+.questionSectionContainer {
+  display: flex;
+
+}
+
+.question {
+ margin-left: 6px;
+}
+
+/* Adjust the breakpoint as needed */
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    text-align: center; /* Center-align the question for mobile */
+  }
+
+  .optionsSection {
+    justify-content: center; /* Center the buttons under the question on mobile */
+  }
+
+  .questionSection {
+    order: -1; /* Make the question appear above the buttons */
+    text-align: center; /* Center-align the question for mobile */
+  }
+}

@@ -79,6 +79,10 @@
     border-width: 2px;
     width: 100%;
   }
+
+  .primary_button:disabled {
+    background-color: #babcc8 !important;
+  }
   
   .dob_container {
     position: relative;
