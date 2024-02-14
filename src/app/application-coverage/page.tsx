@@ -13,10 +13,7 @@ export default function Page() {
     console.log(data);
   };
 
-  const selectedCard = useWatch({ control : methods.control, name: "selectedCard" });
-
-  console.log(selectedCard);
-  
+  const selectedCard = useWatch({ control : methods.control, name: "selectedCard" });  
 
   return (
     <Container
@@ -165,6 +162,7 @@ export default function Page() {
           </section>
         </>
       }
+      hasNav={true}
     />
   );
 }

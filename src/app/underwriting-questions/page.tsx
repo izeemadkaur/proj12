@@ -78,6 +78,8 @@ export default function Page() {
           </section>
         </>
       }
+
+      hasNav={true}
     />
   );
 }

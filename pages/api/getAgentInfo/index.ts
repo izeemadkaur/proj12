@@ -8,16 +8,10 @@ export default async function handler(req: any, res: any) {
   }
   if (req.method === "POST") {
     const testUsername = "USER";
-    const testPassword = "123456";
-
-    console.log("HERE");
-    
+    const testPassword = "123456";    
 
     const username = req?.body?.username || "";
-    const password = req?.body?.password || "";
-
-    console.log({username, password});
-    
+    const password = req?.body?.password || "";    
 
     if (username === testUsername && password === testPassword) {
       res

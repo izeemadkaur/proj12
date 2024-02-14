@@ -4,11 +4,12 @@ import Styles from "./index.module.css";
 
 interface ContainerProps {
   comps: any;
+  hasNav?: boolean | true
 }
 
 const Container = (props: ContainerProps) => {
   const { agentInfo } = useAgentInfo();
-  const { comps } = props;
+  const { comps, hasNav } = props;
 
   console.log(agentInfo);
   
@@ -16,7 +17,7 @@ const Container = (props: ContainerProps) => {
   return (
     <div className={Styles.Container}>
       <div className={Styles.ContainerTwo}>
-        {<InfoBox />}
+        {hasNav && <InfoBox />}
         {comps}
       </div>
     </div>

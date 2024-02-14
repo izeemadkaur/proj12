@@ -22,8 +22,13 @@ export default function Home() {
   return (
     <Container
       comps={
-        <Login />
+        <div className={Styles.LoginContainer}>
+
+          <Login />
+        </div>
       }
+
+      hasNav={false}
     />
   );
 }
