@@ -13,7 +13,10 @@ export default function Page() {
     console.log(data);
   };
 
-  const selectedCard = useWatch({ control : methods.control, name: "selectedCard" });  
+  const selectedCard = useWatch({
+    control: methods.control,
+    name: "selectedCard",
+  });
 
   return (
     <Container
@@ -141,21 +144,21 @@ export default function Page() {
                 </div>
 
                 <div className={Styles.ButtonContainer}>
-                <Button
-                text="Continue"
-                onClick={undefined}
-                arguments={undefined}
-                buttonType={"primary"}
-                navigateTo={undefined}
-                disabled={!selectedCard}
-              />
-                <Button
-                text="Back"
-                onClick={undefined}
-                arguments={undefined}
-                buttonType={"secondary"}
-                navigateTo={undefined}
-              />
+                  <Button
+                    text="Continue"
+                    onClick={undefined}
+                    arguments={undefined}
+                    buttonType={"primary"}
+                    navigateTo={undefined}
+                    disabled={!selectedCard}
+                  />
+                  <Button
+                    text="Back"
+                    onClick={undefined}
+                    arguments={undefined}
+                    buttonType={"secondary"}
+                    navigateTo={undefined}
+                  />
                 </div>
               </form>
             </FormProvider>

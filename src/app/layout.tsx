@@ -3,7 +3,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Theme from "@/app/Theme";
-import { AgentInfoProvider } from "@/contexts/AgentInfoContext";
+import { PersistGate } from "redux-persist/integration/react";
+import { Provider } from "react-redux";
+import { persistor, store } from "@/slices/store";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,9 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AgentInfoProvider>
-          <Theme children={children} />
-        </AgentInfoProvider>
+        <Provider store={store}>
+          <PersistGate loading={null} persistor={persistor}>
+            <Theme children={children} />
+          </PersistGate>
+        </Provider>
       </body>
     </html>
   );

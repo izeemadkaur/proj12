@@ -35,6 +35,21 @@
     background-color: var(--color-04);
 }
 
+.label {
+  font-weight: 400;
+}
+
+.inputField {
+  /* width: 100%; */
+  border: 2px solid var(--color-01);
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 10px;
+  color: var(--color-01);
+  display: inline-block;
+  font-size: 0.85rem;
+}
+
 @media (max-width: 600px) {
   #navigation-container {
     height: 8rem;
@@ -91,6 +106,7 @@
 .ApplicantInfoContainer {
   display: flex;
   justify-content: space-evenly;
+  /* max-width: 800px; */
 }
 
 .ApplicantNameContainer {
@@ -113,11 +129,15 @@
     font-weight: 700;
 }
 
-.col {
+.col, .editFormCol {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   grid-gap: 10px;
+}
+
+.col {
+  padding: 20px;
+
 }

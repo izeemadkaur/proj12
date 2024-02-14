@@ -1,7 +1,7 @@
 {
     "agentCode:": "XXXXXXXX",
     "name": "John Smith",
-    "gender": "Male",
+    "sex": "Male",
     "age": 46,
     "birthdate": "1/2/1980",
     "height": "5'11\"",

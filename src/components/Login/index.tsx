@@ -4,7 +4,9 @@ import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import { useState } from "react";
 import { Button } from "../UI/Button";
 import { Input } from "../UI/Input";
-import { useAgentInfo } from "@/contexts/AgentInfoContext";
+import { useDispatch } from "react-redux";
+import { login } from "@/slices/agentSlice";
+import { useNavigate } from "@/util/util";
 
 interface IFormInput {
   username: string;
@@ -13,8 +15,8 @@ interface IFormInput {
 }
 
 function Login(props: LoginProps): JSX.Element {
-  const { setAgentInfo } = useAgentInfo();
-
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
 
   const [error, setError] = useState<string>("");
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
@@ -74,9 +76,14 @@ function Login(props: LoginProps): JSX.Element {
       if (response.status == 200) {
         const userInfo = response?.data?.user || "";
 
+        console.log(userInfo);
+        
+
         if (userInfo) {
-          setAgentInfo(userInfo);
-          return window.location.assign("/application-coverage");
+          dispatch(login(userInfo));
+
+          
+          return navigate("/application-coverage");
         }
 
         console.log(84, { errMessage: "errMessage" });

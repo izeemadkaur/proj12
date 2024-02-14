@@ -1,39 +1,17 @@
 "use client";
-import Banner from "@/components/Banner";
 import Container from "@/components/Container";
-import SelectableCard from "@/components/UI/SelectableCard";
-import { Controller, FormProvider, useForm, useWatch } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import Styles from "./index.module.css";
 import { Button } from "@/components/UI/Button";
 import SelectableQuestion from "@/components/UI/SelectableQuestion";
-
-const questions = [
-  { question: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat?`, option1: "Yes", option2: "No" },
-  { question: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat?`, option1: "Yes", option2: "No" },
-  { question: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat?`, option1: "Yes", option2: "No" },
-  { question: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat?`, option1: "Yes", option2: "No" },
-  { question: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat?`, option1: "Yes", option2: "No" },
-];
+import Questions from "@/data/questions.json";
 
 export default function Page() {
-  const { control, handleSubmit } = useForm({
-    defaultValues: {
-      // Initialize all answers, assuming you have a dynamic way to set these keys
-      answer0: '',
-      answer1: '',
-      // Continue for the number of questions you have
-    }
-  });
+  const { control, handleSubmit } = useForm();
 
   const onSubmit = (data: any) => {
     console.log(data);
   };
-
-  // const selectedCard = useWatch({
-  //   control: control,
-  //   name: "selectedCard",
-  // });
-
 
   return (
     <Container
@@ -46,7 +24,7 @@ export default function Page() {
           </section>
           <section>
             <form onSubmit={handleSubmit(onSubmit)} className={Styles.form}>
-              {questions.map((q, index) => (
+              {Questions.map((q, index) => (
                 <SelectableQuestion
                   key={index}
                   question={q.question}
@@ -56,28 +34,27 @@ export default function Page() {
                   control={control}
                 />
               ))}
-                              <div className={Styles.ButtonContainer}>
+              <div className={Styles.ButtonContainer}>
                 <Button
-                text="Continue"
-                onClick={undefined}
-                arguments={undefined}
-                buttonType={"primary"}
-                navigateTo={undefined}
-                // disabled={!selectedCard}
-              />
+                  text="Continue"
+                  onClick={undefined}
+                  arguments={undefined}
+                  buttonType={"primary"}
+                  navigateTo={undefined}
+                  // disabled={!selectedCard}
+                />
                 <Button
-                text="Back"
-                onClick={undefined}
-                arguments={undefined}
-                buttonType={"secondary"}
-                navigateTo={undefined}
-              />
-                </div>
+                  text="Back"
+                  onClick={undefined}
+                  arguments={undefined}
+                  buttonType={"secondary"}
+                  navigateTo={undefined}
+                />
+              </div>
             </form>
           </section>
         </>
       }
-
       hasNav={true}
     />
   );
