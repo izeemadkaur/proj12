@@ -24,7 +24,7 @@
 
 .optionsSection {
   display: flex;
-  gap: 10px; /* Space between buttons */
+  gap: 10px;
 }
 
 .card .selected {
@@ -42,19 +42,18 @@
  margin-left: 6px;
 }
 
-/* Adjust the breakpoint as needed */
 @media (max-width: 600px) {
   .card {
     flex-direction: column;
-    text-align: center; /* Center-align the question for mobile */
+    text-align: left;
   }
 
   .optionsSection {
-    justify-content: center; /* Center the buttons under the question on mobile */
+    justify-content: flex-start;
   }
 
   .questionSection {
-    order: -1; /* Make the question appear above the buttons */
-    text-align: center; /* Center-align the question for mobile */
+    order: -1;
+    text-align: left;
   }
 }
